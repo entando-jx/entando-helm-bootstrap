@@ -1,0 +1,37 @@
+kind: "EntandoCompositeApp"
+apiVersion: "entando.org/v1"
+metadata:
+  name: "{{ .Values.app.name }}-composite-app"
+  namespace: {{ .Release.Namespace }}
+entandoStatus:
+  serverStatuses: {}
+  entandoDeploymentPhase: "requested"
+spec:
+  components:
+  {{- if and .Values.externalDatabase (ne .Values.app.dbms "none") }}
+    - kind: "EntandoDatabaseService"
+      metadata:
+        name: "{{ .Values.app.name }}-ds"
+      spec:
+        dbms: {{ .Values.app.dbms }}
+        databaseName: "{{ .Values.externalDatabase.databaseName }}"
+        host: "{{ .Values.externalDatabase.host }}"
+        port: "{{ .Values.externalDatabase.port }}"
+        secretName: "{{ .Values.app.name }}-db-admin-secret"
+    {{- end }}
+    - kind: "EntandoKeycloakServer"
+      metadata:
+        name: "{{ .Values.app.name }}-kc"
+      spec:
+        dbms: {{ .Values.app.dbms | default "none" }}
+        isDefault: true
+        replicas: 1
+    {{- if .Values.deployClusterInfrastructure }}
+    - kind: "EntandoClusterInfrastructure"
+      metadata:
+        name: "{{ .Values.app.name }}-eci"
+      spec:
+        dbms: {{ .Values.app.dbms | default "none" }}
+        replicas: 1
+        isDefault: true
+    {{- end }}

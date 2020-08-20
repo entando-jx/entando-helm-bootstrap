@@ -1,0 +1,445 @@
+---
+# Source: entando-bootstrap/charts/operator/templates/ca-cert-secret.yaml
+apiVersion: v1
+data:
+  ca0.crt: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2akNDQWRLZ0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFtTVNRd0lnWURWUVFEREJ0dmNHVnUKYzJocFpuUXRjMmxuYm1WeVFERTFOelEzTmpnM05UWXdIaGNOTVRreE1USTJNVEUwTlRVMldoY05Namt4TVRJegpNVEUwTlRVM1dqQW1NU1F3SWdZRFZRUUREQnR2Y0dWdWMyaHBablF0YzJsbmJtVnlRREUxTnpRM05qZzNOVFl3CmdnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUN3bnFndU0rZXNhN2laM0Eva0F2Q0QKQnpkWCs5dmtuRDZPUVpJd3hzSTZSY1N1RllLclhUc29Sc0d1amFaaFNCRFc5WEd6QUhRSkJwVFhiaUFUNjdzdgo3K0FvcHJTNFZERnFuY2l6c3I2NW96NkVNWGxQaFgwRndQQUFjL3FyV0o4dlloMmRla1pPTTRrZlI2MXUvVTZyCjhRYUdya245R25Tb0lzbkg5cGJGMFhRc3ZrRjdVblF2MFNEZnNQbVp5VTkyWWJVYTBuajR2WHdwc2dzQWQ1L04KOHB1V2JvQnE1dXF0QzcvdWE0N0w0ODdSbTN4MFdtZHBGekh4ci9HVDRNS1JoQVp3dWlxWXgrZThsUnBoY29DNwpXVy9yRWpyN1EvT01ianl0UnBKY0NPYkJlbk9ZMUppK2VtdHdyS1Y5Rzd4Z1o4aGpSQWxGL1paVXJSaWNOUnBKCkFnTUJBQUdqSXpBaE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQXNOeURqaWtRSzMzMDdja1pueTBLZU8vamQ3OWRmcGZZZHRsaU15aFNzR251aQpadEdUdkJtRlZhU3dyL3YrY3dna2tNWkZQbSt2ODFrSGlGS01CaDIyRjloRU1yV25FK3NNUGNJcGcrYkFsczVPCkVOc0krSyttZXVSYmMwNXpSTEVYRHRQZThBQXRKT2JOWEZaYVR3TWlHbERTNHJOQy9kRjJyMmw0TzdMZTc5YkYKc3RZYW04dUthZERxbThWdWdvaHk4WktuSCtlK256WFdVcTF3a3FmSFR6eURoQVFqSmsxRGh3Ym01dDA3K3BJVgordTNHRnlkRU4wVFFWdHhrZE0vZEcvVyttYmYzd0VqM0hiMWcvT0VybDc3NU5rY3lvbFliR3g4WXNkdHcvN09XCnJtMnVtWGF6WlptaVhqQk5aMGl0SnM5YWRBeTNGeUhvVHlrQVFJOU0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  ca1.crt: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZxVENDQTVHZ0F3SUJBZ0lRRWhKakFOc0F3NnhGTmZ5ZklmZFBsekFOQmdrcWhraUc5dzBCQVFzRkFEQVUKTVJJd0VBWURWUVFERXdsTVlXSlNUMDlVUTBFd0hoY05NVFl3T1RFek1UUTFOekl4V2hjTk16WXdPVEV6TVRVdwpOekV5V2pBVU1SSXdFQVlEVlFRREV3bE1ZV0pTVDA5VVEwRXdnZ0lpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElDCkR3QXdnZ0lLQW9JQ0FRRGJSRFV6amVhYmtuY0RLckh2YTVvdW80RG5SdWVBNksvbmNwaFUvaVdsSUFmV1UwNmEKMXZ2UnhtUWJrKzcxN1psanQyUGp4aThhd2pWM3VheWNLL1dDd3d5SE5ONjJBV0Nhd0ozTmsyTzM2bDF4cU9LNQpGS2pLeDhyTzZFWmY3bEJVMjlIcUVpQngwU0lDMnYyUkVtV09FR1M3ckIyQkU4K05JMi9YcWwzTFQ4YU9kR2NVCkh6WTk2elhPQTZCY0s5c0pXd0ZLZGNrSVZkTEF1QS9IS0dBdXRwWWF5ak5pSXBVRTBhOFZ5cHN6NmJiSnhOeG8KU2ZCUXdRMU9DL0dsM0dkdHBoMnhORld6L0Y2OHI0L3FBM2hielA0RTNRT0tXM0RhKzhlZzZuTU9neGZZK25wNgo5V3dQK2hXaFd1aVFCS0g4dUgyOHNqaEQzWURteXpXWFlmaUJndW9WRU9sVy9ZT0Z0Snl2ZHh3U3lwYUR5WGgyCk1nTmg1N1orV2JxL2JDaXZKSzFqeTV3WEdLc1QyMk5teEQ0UjAvODRyVC9kT0xVOTFKKzhib0hBMEtsMlJGNXoKdnY0eVJpaEh0V3F6c3dmYk55VldwZmc1TGdQV0s0YWkxNjRISy90WlhGNlVoVWlUUk12ZnJQdFVlWno2bjB3egpnREl6YWw3QnZRRm1WRDRGaDdkbktYTkQ3MDJTWXYyYXFuU1czSVNUVFlUVTFrZ2huVE5nK2o4V0dYUzdmMjJLCmRVTkd4bDVtRlU3dHJtVWdJcHZVclczb2pYZkNDRmZrN3dDOUYyVmFoUko3WXhoelp2aDFkbXBiWkpyWTdJZFoKcW94bXRjOVY3eUJWdWFVTUt1QklUUW5xZmUrK0k4blc1TG1uSmlhNW95cTdaZ2VnaS9uNkx4Ky9uUUlEQVFBQgpvNEgyTUlIek1Bc0dBMVVkRHdRRUF3SUJoakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNQCkRTcG14RDN2Q1R2YmZkM2Fjb09jczduTkZqQVFCZ2tyQmdFRUFZSTNGUUVFQXdJQkFEQ0JvUVlEVlIwZ0JJR1oKTUlHV01JR1RCZ2dxQXdTTEwwTlpCVENCaGpCQ0JnZ3JCZ0VGQlFjQ0FqQTJIalFBUXdCdkFISUFjQUJ2QUhJQQpZUUIwQUdVQUlBQlFBRzhBYkFCcEFHTUFlUUFnQUZNQWRBQmhBSFFBWlFCdEFHVUFiZ0IwTUVBR0NDc0dBUVVGCkJ3SUJGalJvZEhSd09pOHZkM2QzTG5CcmFXeGhZaTV5WlhSbExuUmxjM1J3YjNOMFpTOWpaWEowYzNaakwzQnYKYkdsamVTNTBlSFFBTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElDQVFCeTF6d1dPK3lVL2VnbHJwUkhZUnNDTVpldApzejAvVkpNSWhHSHkvYklOQ2h3U3N0eDFBTytoS21JYStDUW1qbU9ML1lzM1F5UUE2UEtZby8zaXY2VjVxRVFuCnUwN1ZWZUN6TGh3TEpqS1VMWWJYVlNkZXVYaEF1TGhyQlhOY0dTSDROMEQ3ZWlyQStLUHFtWGVxWnRvWVlhSTgKTHJ2dDZvS1lSUlZZbkhUR3lidnlNWjdOSFc3VGZzMG5MTHgyNWR4cG9JWXRIWDBKUlNoVGV1ZFZjQmhoNGRFKwpxZ2VjVDF5VWd2ald2V29ESnIza09BWWdNWU4ydEtPMGk1THNydFdnL2Y0QkFReTAyVmwxUTBiVndjVWdyUmFmCkNLRDJjUktVWExXOEhXTFhNYmNiRXg1Mm80SktzZWs0SnhvYy9TMncvWmNpdWRXd0ZVZXEzMjRtU3VTeG5lREUKMlVMUnJ2b0pQU3VIWjFyR3hnRGRxcjZQMlRsL1RzaW5uY0V6a09ITEJhMXNiTzEvMWU3K1Vhc0N4YnREQkhxYgpobk1aRytYYmc0bmlWaDhmS2hYVXlmalFvMXpROVFteGZrZTZ5NURYSmlSajB0eWVidVNudHZvbk1rSlo4TXkxCk10WGxNeDV4ajcvWlZuclFDSjUwd3pGajBsK2NTdHdESk5Mdm45OWx2Q0Zrd2cxN2dTdXpOKzVwQllCZXdnd3AKVVpSNHFvVXkwUU8rMVplVTEvZWtwNkFOczc5UTQ0K05PWUNEVDhMYzN6aFcxUU0vdXYvSUtEZUVLMkQrYmE4SQpsanM1bHpzTFUvbWdKcUhoYmVWK2tWeDVTVStzQnpCdCs3OEl2ay9BaURBdFpaN3IrTjE5b2UreVlaV1lKL1gyCm5uK1Q0WmZxZEpPTzBiQzArZz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  ca2.crt: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUlDVENDQmZHZ0F3SUJBZ0lUSlFBQUFBbDU2Q1FoRzB5RkNRQUFBQUFBQ1RBTkJna3Foa2lHOXcwQkFRc0YKQURBVU1SSXdFQVlEVlFRREV3bE1ZV0pTVDA5VVEwRXdIaGNOTVRZeE1URTJNVFkxTmpRNVdoY05Nall4TVRFMgpNVGN3TmpRNVdqQkVNUmt3RndZS0NaSW1pWlB5TEdRQkdSWUpkR1Z6ZEhCdmMzUmxNUlF3RWdZS0NaSW1pWlB5CkxHUUJHUllFY21WMFpURVJNQThHQTFVRUF4TUlUR0ZpVTFWQ1EwRXdnZ0lpTUEwR0NTcUdTSWIzRFFFQkFRVUEKQTRJQ0R3QXdnZ0lLQW9JQ0FRQzN6SkdHZDRxdHZXUVZYV0U3UnVYZXhuUkN0SUxwT2Yza1BQYTc0ODk3c1BzZAovQm5vdjJlaGpsTmVwRXo4R1BETmszNytZamNLRDUyT1hTZW5YNTRMSVUvYzFodktrVnBCa0IxQU90di9NMW5UCm1sdCtubEhKdmU0YVVScmFvTlltVHpOd2JpY1JnWXIvZm1IczZmNkozYkpFdWNjeEsvVGhITnMrczVMV1A5dXoKRUxlU3RuV21leWhrZHJYSGk4a3V6VTFnK1VEWjAzTW5rSzFQN0V6SnVWT3JWc0xpZ3pmL3A4NXRMYTRQQWc2UgpxY1JlVytvckNXNkUrSk5DdG1ZNXlTb2hmSC9RZWUwK2FUby9hblZGbmEzUXQzaGhIVTFEaGw0dU1RM05qMStOClRqVFBxbisxalRFc0t6NnVvM3pmZG9DNFYrWkxVcTVhQnd3YS8xRVZRLzc3OXRCZUpLdmtxcXBTSDR3SU5yUXgKTjdya2JpOW8vWnpUUkxUT2RrVjZUR0tJMHdadmVuM3dYU0lzeklRUzNlNEplZDVYeS94eFdyY0RHd21YeWJISwpVSjhCSmFZNHBiWUZBeXl0OFRTN2VIMFFvaVdDdzIwZlc3NFBqTEJTRi9OT0JjOUQ0MnFxU1lZNGVxYklidmEvCk52b2p2V0VYVW4zUVpQa094TjRnR1N3clFod2Q0TDZmUURVcUoyb0IvNUt6MkRLYWZTamZxUVZZdkI2dHBTQXkKNS9mcDg3Y3o2a2grUGphRWtOTUZDNklpb1YzaFJmTWdxMnZMZDNBMTBscDRGM0JWc1dqRU9KUlcrVkt1NzNCcApFbmJEQlBBVDVZQ0dTVWt5YVBvY0VBd0YybEpKblRla21WQ3I5Z0hCcEdYQnhlbjBjN0tyS3YrcERzV2tBUUlECkFRQUJvNElESWpDQ0F4NHdFZ1lKS3dZQkJBR0NOeFVCQkFVQ0F3TUFBekFqQmdrckJnRUVBWUkzRlFJRUZnUVUKWUVGRmxFa3dkNGx2anNpREViZmI1Nm1XbXFJd0hRWURWUjBPQkJZRUZDZ2tvd3JtM0xhK0FIeTRNbnJlZHhFTwpObHpzTUJrR0NTc0dBUVFCZ2pjVUFnUU1IZ29BVXdCMUFHSUFRd0JCTUFzR0ExVWREd1FFQXdJQmhqQVNCZ05WCkhSTUJBZjhFQ0RBR0FRSC9BZ0VBTUI4R0ExVWRJd1FZTUJhQUZJOE5LbWJFUGU4Sk85dDkzZHB5ZzV5enVjMFcKTUlJQk13WURWUjBmQklJQktqQ0NBU1l3Z2dFaW9JSUJIcUNDQVJxR0lHaDBkSEE2THk5d2EybDNaV0l5TDNCcgphUzlNWVdKU1QwOVVRMEV1WTNKc2hqQm9kSFJ3T2k4dmFXNTBZM0pzTG5CdmMzUmxhWFJoYkdsaGJtVXVhWFF2CmNHdHBMMHhoWWxKUFQxUkRRUzVqY215R2djTnNaR0Z3T2k4dmNtVjBaUzUwWlhOMGNHOXpkR1V2UTA0OVRHRmkKVWs5UFZFTkJMRU5PUFZOUVMwbEJVekF4Vml4RFRqMURSRkFzUTA0OVVIVmliR2xqSlRJd1MyVjVKVEl3VTJWeQpkbWxqWlhNc1EwNDlVMlZ5ZG1salpYTXNRMDQ5UTI5dVptbG5kWEpoZEdsdmJpeEVRejFqYjNKd0xFUkRQWFJsCmMzUndiM04wWlQ5alpYSjBhV1pwWTJGMFpWSmxkbTlqWVhScGIyNU1hWE4wUDJKaGMyVS9iMkpxWldOMFEyeGgKYzNNOVkxSk1SR2x6ZEhKcFluVjBhVzl1VUc5cGJuUXdnZ0V1QmdnckJnRUZCUWNCQVFTQ0FTQXdnZ0VjTUN3RwpDQ3NHQVFVRkJ6QUNoaUJvZEhSd09pOHZjR3RwZDJWaU1pOXdhMmt2VEdGaVVrOVBWRU5CTG1OeWREQThCZ2dyCkJnRUZCUWN3QW9Zd2FIUjBjRG92TDJsdWRHTnliQzV3YjNOMFpXbDBZV3hwWVc1bExtbDBMM0JyYVM5TVlXSlMKVDA5VVEwRXVZM0owTUlHdEJnZ3JCZ0VGQlFjd0FvYUJvR3hrWVhBNkx5OXlaWFJsTG5SbGMzUndiM04wWlM5RApUajFNWVdKU1QwOVVRMEVzUTA0OVFVbEJMRU5PUFZCMVlteHBZeVV5TUV0bGVTVXlNRk5sY25acFkyVnpMRU5PClBVTnZibVpwWjNWeVlYUnBiMjRzUkVNOVkyOXljQ3hFUXoxMFpYTjBjRzl6ZEdVL1kwRkRaWEowYVdacFkyRjAKWlQ5aVlYTmxQMjlpYW1WamRFTnNZWE56UFdObGNuUnBabWxqWVhScGIyNUJkWFJvYjNKcGRIa3dEUVlKS29aSQpodmNOQVFFTEJRQURnZ0lCQUFVM3NycHBGcmNXUDNnQlFQYjZkRTYwZk5kcFBRa0VHcllZTUE3eWE4cnIrS2pXCjgycEtNNFE2VUtpYWlUc2s3b2hGVUNETjBhdmUyalRKQ3VvZ0tFaEN3UnVWa1ZYcy9hcWUza1dXUnFncVU3SmEKNjQ2R2YxQ1oyK2NuLzkrdUFYMWJaV1U1YjRqSGZVMkRYdmY3R0tKbGxZSWFQalhtcU1jakxib3dGVFBEMWZQdAprVXJBQTFSdXVWSW9aem42bHVNMnowbHJsQU83RDg4L21yekNjZU1YUWlZK3lSR0NDVy84WmtSY0NaV3JxOHlQCmxEei9OeUhrWG1raDJ6T2ozTUtGdW5Pak51NGQ1M3VvMEc0SVRVaUNuTmpjNUM5bVpJNG1UMFIxQWhQREpoM1gKL3ZMRW5IblQ2Vm40YnpNWkUyaUFiVGlERUxvSTJvaDRYWENSZ0hXQmNtMkVmM1FVaW5qQXNSa09XMkZDWUZjMQpvczYyQ1RaN05IcVgwMHdXSzk5bGRpMW80V3Z1M1piQVo3UmNzWGhWODhOekdUY1V6SHdCOGJMcUt6blBMdTh0ClhQUlhPQ2plaWtjUndvTmhrNU1SWWdMQUpwL2hlVDhEcHU5MVNXQk5KSC9Oak5CWWZqMFdOTkpRbGhDaEtaYWEKWU4vYUVMTS9iMnl4QXBRZUZ6amZYZjRRQjJzU28zajlDdEtSdEVodTJsY1pSbCt3VjFzNWFmcE1TMVFTSjRvaQpOcUJBNFdkc0RQMFR2TUpyVmlEUnEvcm9ITUV1UU8wSmUrY1gvN2tEeUY3QXpxYVJQbmptNlEzWEMvMU4ydUllCkNjN2VDV2Q2VkdpUmUrRU9SbklYMXczMVNPRkRGUFE2TTZDWEYzYVFBSWpaVlNvMkkyWWtnTE56QVM3VwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+kind: Secret
+metadata:
+  name: entando-ca-cert-secret
+  namespace: entando-operator
+type: Opaque
+
+---
+# Source: entando-bootstrap/charts/operator/templates/tls-secret.yaml
+apiVersion: v1
+data:
+  tls.crt: >-
+    
+  tls.key: >-
+    
+kind: Secret
+metadata:
+  name: entando-tls-secret
+  namespace: entando-operator
+type: kubernetes.io/tls
+
+---
+# Source: entando-bootstrap/charts/operator/templates/docker-image-info-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: entando-docker-image-info
+  namespace: entando-operator
+data:
+  app-builder: >-
+    {"version":"6.1.170","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  busybox: >-
+    {"version":"latest","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-avatar-plugin: >-
+    {"version":"6.0.5","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-component-manager: >-
+    {"version":"6.0.57","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-de-app-eap: >-
+    {"version":"6.1.92","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-de-app-wildfly: >-
+    {"version":"6.1.92","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-app-controller: >-
+    {"version":"6.1.10","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-app-plugin-link-controller: >-
+    {"version":"6.1.2","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-cluster-infrastructure-controller: >-
+    {"version":"6.1.5","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-composite-app-controller: >-
+    {"version":"6.1.4","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-controller-coordinator: >-
+    {"version":"6.1.11","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-dbjob: >-
+    {"version":"6.1.4","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-keycloak-controller: >-
+    {"version":"6.1.16","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-plugin-controller: >-
+    {"version":"6.1.5","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-k8s-service: >-
+    {"version":"6.0.20","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-keycloak: >-
+    {"version":"6.1.2","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-plugin-sidecar: >-
+    {"version":"6.0.2","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  entando-process-driven-plugin: >-
+    {"version":"6.0.50","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  mysql-57-centos7: >-
+    {"version":"latest","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+  postgresql-96-centos7: >-
+    {"version":"latest","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+
+---
+# Source: entando-bootstrap/charts/operator/templates/k8s-service-serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: entando-k8s-service
+  namespace: entando-operator
+imagePullSecrets:
+  - name: postesviluppo-azurecr-io
+
+---
+# Source: entando-bootstrap/charts/operator/templates/operator-serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: entando-operator
+  namespace: entando-operator
+imagePullSecrets:
+  - name: postesviluppo-azurecr-io
+
+---
+# Source: entando-bootstrap/charts/operator/templates/plugin-serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: entando-plugin
+  namespace: entando-operator
+imagePullSecrets:
+  - name: postesviluppo-azurecr-io
+
+---
+# Source: entando-bootstrap/charts/operator/templates/k8s-service-role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: entando-k8s-service
+  namespace: entando-operator
+rules:
+  - apiGroups:
+      - entando.org
+    resources:
+      - entandokeycloakservers
+      - entandokeycloakservers/finalizers
+      - entandoclusterinfrastructures
+      - entandoclusterinfrastructures/finalizers
+      - entandoapps
+      - entandoapps/finalizers
+      - entandoplugins
+      - entandoplugins/finalizers
+      - entandoapppluginlinks
+      - entandoapppluginlinks/finalizers
+      - entandodatabaseservices
+      - entandodatabaseservices/finalizers
+      - entandocompositeapps
+      - entandocompositeapps/finalizers
+      - entandodebundles
+      - entandodebundles/finalizers
+    verbs:
+      - "*"
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - "*"
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - "routes"
+      - "routes/custom-host"
+    verbs:
+      - "*"
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - create
+      - get
+      - delete
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - "*"
+  - apiGroups:
+      - ""
+    resources:
+      - namespaces
+    verbs:
+      - get
+---
+# Source: entando-bootstrap/charts/operator/templates/operator-role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: entando-operator
+  namespace: entando-operator
+rules:
+  - apiGroups:
+      - entando.org
+    resources:
+      - entandokeycloakservers
+      - entandokeycloakservers/finalizers
+      - entandoclusterinfrastructures
+      - entandoclusterinfrastructures/finalizers
+      - entandoapps
+      - entandoapps/finalizers
+      - entandoplugins
+      - entandoplugins/finalizers
+      - entandoapppluginlinks
+      - entandoapppluginlinks/finalizers
+      - entandodatabaseservices
+      - entandodatabaseservices/finalizers
+      - entandocompositeapps
+      - entandocompositeapps/finalizers
+    verbs:
+      - "*"
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - create
+      - get
+      - delete
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+      - services
+      - endpoints
+      - persistentvolumeclaims
+      - configmaps
+    verbs:
+      - "*"
+  - apiGroups:
+      - apps
+      - extensions
+    resources:
+      - deployments
+    verbs:
+      - "*"
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - "*"
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - "routes"
+      - "routes/custom-host"
+    verbs:
+      - "*"
+  - apiGroups:
+      - ""
+    resources:
+      - namespaces
+      - serviceaccounts
+    verbs:
+      - get
+  - apiGroups:
+      - rbac.authorization.k8s.io
+    resources:
+      - roles
+      - rolebindings
+    verbs:
+      - get
+
+---
+# Source: entando-bootstrap/charts/operator/templates/plugin-role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: entando-plugin
+  namespace: entando-operator
+rules:
+  - apiGroups:
+      - entando.org
+    resources:
+      - entandoplugins
+    verbs:
+      - get
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - create
+      - get
+      - delete
+      - update
+---
+# Source: entando-bootstrap/charts/operator/templates/k8s-service-rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: entando-k8s-service-rolebinding
+  namespace: entando-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: entando-k8s-service
+subjects:
+  - kind: ServiceAccount
+    name: entando-k8s-service
+    namespace: entando-operator
+
+---
+# Source: entando-bootstrap/charts/operator/templates/operator-rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: entando-operator-rolebinding
+  namespace: entando-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: entando-operator
+subjects:
+  - kind: ServiceAccount
+    name: entando-operator
+    namespace: entando-operator
+---
+# Source: entando-bootstrap/charts/operator/templates/plugin-rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: entando-plugin-rolebinding
+  namespace: entando-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: entando-plugin
+subjects:
+  - kind: ServiceAccount
+    name: entando-plugin
+    namespace: entando-operator
+
+---
+# Source: entando-bootstrap/charts/operator/templates/deployment.yaml
+
+apiVersion: "extensions/v1beta1"
+kind: Deployment
+metadata:
+  name: entando-operator
+  namespace: entando-operator
+  labels:
+    draft: draft-app
+    chart: "operator-6.1.12"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      draft: draft-app
+      app: entando-operator
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: entando-operator
+    spec:
+      serviceAccountName: entando-operator
+      volumes:
+        - name: entando-ca-cert-volume
+          secret:
+            secretName: entando-ca-cert-secret
+      containers:
+        - name: operator
+          image: "docker.io/entando/entando-k8s-controller-coordinator:6.1.12"
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: entando-ca-cert-volume
+              mountPath: /etc/entando/ca
+          env:
+            - name: ENTANDO_CA_CERT_PATHS
+              value: "/etc/entando/ca/ca0.crt /etc/entando/ca/ca1.crt /etc/entando/ca/ca2.crt "
+            - name: ENTANDO_K8S_OPERATOR_SERVICEACCOUNT
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.serviceAccountName
+            - name: ENTANDO_DEFAULT_ROUTING_SUFFIX
+              value: "apps.serv.run"
+            - name: ENTANDO_DISABLE_KEYCLOAK_SSL_REQUIREMENT
+              value: "true"
+            - name: ENTANDO_DOCKER_IMAGE_ORG_FALLBACK
+              value: "entando"
+            - name: ENTANDO_DOCKER_IMAGE_VERSION_FALLBACK
+              value: "6.0.0"
+            - name: ENTANDO_DOCKER_REGISTRY_FALLBACK
+              value: "docker.io"
+            - name: ENTANDO_K8S_OPERATOR_FORCE_DB_PASSWORD_RESET
+              value: "true"
+            - name: ENTANDO_K8S_OPERATOR_IMPOSE_DEFAULT_LIMITS
+              value: "false"
+            - name: ENTANDO_K8S_OPERATOR_SECURITY_MODE
+              value: "lenient"
+            - name: ENTANDO_NAMESPACES_TO_OBSERVE
+              value: "entando-operator,portale-fornitori"
+            - name: ENTANDO_POD_COMPLETION_TIMEOUT_SECONDS
+              value: "1000"
+            - name: ENTANDO_POD_READINESS_TIMEOUT_SECONDS
+              value: "1000"
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/EntandoControllerCoordinator.ready
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/EntandoControllerCoordinator.ready
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 400m
+              memory: 512Mi
+          terminationGracePeriodSeconds: 
+
+---
+# Source: entando-bootstrap/templates/entando-composite-app.yaml
+kind: "EntandoCompositeApp"
+apiVersion: "entando.org/v1"
+metadata:
+  name: "quickstart-composite-app"
+  namespace: entando-operator
+entandoStatus:
+  serverStatuses: {}
+  entandoDeploymentPhase: "requested"
+spec:
+  components:
+    - kind: "EntandoKeycloakServer"
+      metadata:
+        name: "quickstart-kc"
+      spec:
+        dbms: postgresql
+        isDefault: true
+        replicas: 1
+    - kind: "EntandoClusterInfrastructure"
+      metadata:
+        name: "quickstart-eci"
+      spec:
+        dbms: postgresql
+        replicas: 1
+        isDefault: true
+
+---
+# Source: entando-bootstrap/templates/db-admin-secret.yaml
+
+
