@@ -1,36 +1,3 @@
----
-kind: ServiceAccount
-apiVersion: v1
-imagePullSecrets:
-  - name: postesviluppo-azurecr-io
-metadata:
-  name: entando-plugin
----
-kind: RoleBinding
-apiVersion: authorization.openshift.io/v1
-metadata:
-  name: entando-editor-rolebinding
-roleRef:
-  name: entando-editor
-subjects:
-  - kind: ServiceAccount
-    name: entando-plugin
-    namespace: portale-fornitori
-  - kind: ServiceAccount
-    name: entando-operator
-    namespace: entando-operator
----
-kind: RoleBinding
-apiVersion: authorization.openshift.io/v1
-metadata:
-  name: entando-operator-rolebinding
-roleRef:
-  name: edit
-subjects:
-  - kind: ServiceAccount
-    name: entando-operator
-    namespace: entando-operator
----
 kind: "EntandoCompositeApp"
 apiVersion: "entando.org/v1"
 metadata:
@@ -51,7 +18,8 @@ spec:
       metadata:
         name: "anagraficafornitori-plugin"
       spec:
-        image: postesviluppo.azurecr.io/portale-fornitori/anagrafica-fornitori:1.0.1
+#        image: postesviluppo.azurecr.io/portale-fornitori/anagrafica-fornitori:1.0.1
+        image: entando/entando-avatar-plugin
         replicas: 1
         dbms: postgresql
         parameters: {}
@@ -69,7 +37,7 @@ spec:
       metadata:
         name: anagrafica-fornitori-link
       spec:
-        entandoAppName:
-        entandoAppNamespace:
-        entandoPluginNamespace:
-        entandoPluginName:
+        entandoAppNamespace: portale-fornitori
+        entandoAppName: fornitori-app
+        entandoPluginNamespace: portale-fornitori
+        entandoPluginName: anagraficafornitori-plugin

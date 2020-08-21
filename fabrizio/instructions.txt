@@ -1,0 +1,7 @@
+1. create the projects portale-fornitori and entando-operator
+2. oc create -f operator-deployment.yaml -n entando-operator
+3. oc create -f entando-editor-role.yaml (needs cluster admin rights)
+4. oc create -f portale-fornitori-serviceaccounts.yaml -n portale-fornitori
+5. oc scale deployment entando-operator --replicas=1 -n entando-operator
+6. Wait for Keycloak to be up and running
+6. oc create -f entando-app-and-plugin.yaml -n portale-fornitori
