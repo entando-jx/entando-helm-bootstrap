@@ -18,8 +18,8 @@ spec:
       metadata:
         name: "anagraficafornitori-plugin"
       spec:
-#        image: postesviluppo.azurecr.io/portale-fornitori/anagrafica-fornitori:1.0.1
-        image: entando/entando-avatar-plugin
+        image: postesviluppo.azurecr.io/portale-fornitori/anagrafica-fornitori:1.0.1
+#        image: entando/entando-avatar-plugin
         replicas: 1
         dbms: postgresql
         parameters: {}
